@@ -16,7 +16,7 @@ def raw_inputs(fn: str) -> List:
     """
     Extracting the raw input files
     """
-    with open(fn, "r") as f:
+    with open(f"../inputs/day02/{fn}", "r") as f:
         inpt = [parse_policy(x.strip()) for x in f.readlines()]
 
     return inpt
@@ -46,12 +46,12 @@ def check_policy2(pol: Tuple) -> bool:
 
 if __name__ == "__main__":
     # Toy exemple and check
-    k = raw_inputs("toypass.txt")
+    k = raw_inputs("toyinputs.txt")
     assert [check_policy(x) for x in k] == [True, False, True]
     assert [check_policy2(x) for x in k] == [True, False, False]
 
     # Part 1
-    k = raw_inputs("puzzlepass.txt")
+    k = raw_inputs("puzzleinputs.txt")
     print("Correct passwords (pt 1): ", sum([check_policy(x) for x in k]))
 
     # part 2

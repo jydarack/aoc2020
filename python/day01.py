@@ -26,7 +26,7 @@ def gold_coins2(inputs: List[int]) -> int:
 
 
 def get_inputs(fn: str) -> List:
-    with open(fn, "r") as f:
+    with open(f"../inputs/day01/{fn}", "r") as f:
         inpt = [int(l.strip()) for l in f.readlines()]
     return inpt
 

@@ -31,7 +31,7 @@ def get_map(fn: str = "toy") -> List[List[str]]:
     Not sure if using a 2x2 list is actually useful as we can directly
     index the strings...
     """
-    with open(f"./{fn}inputs.txt", "r") as f:
+    with open(f"../inputs/day03/{fn}inputs.txt", "r") as f:
         my_map = [list(x.strip()) for x in f.readlines()]
     return my_map
 
