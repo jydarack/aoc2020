@@ -37,7 +37,6 @@ def follow_path(inpt: List, init: str, coords=(0, 0)) -> Tuple:
 
 
 def rotate(waypoint: Tuple, angledeg: int) -> Tuple:
-    ang = angledeg // 90
     mat = [
         [cos(radians(angledeg)), -sin(radians(angledeg))],
         [sin(radians(angledeg)), cos(radians(angledeg))],
